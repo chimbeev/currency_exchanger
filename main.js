@@ -13,32 +13,28 @@ function submitForm(e) {
     const convertCommand = form.querySelector("#commandInput").value; //считываем команду конвертации
     //получаем из команды данные
     let fields = convertCommand.split(' ');
-    let moneyValue = fields[0];//кол-во целевой валюты
-    let targetCurrency = fields[1];//целевая валюта
-    let sourceCurrency = fields[3];//базовая валюта
+    let moneyValue = fields[0];//кол-во базовой валюты
+    let sourceCurrency = fields[1];//базовая валюта
+    let targetCurrency = fields[3];//целевая валюта
     let myHeaders = new Headers();
-    myHeaders.append("apikey", "ZJNdEPtIMdhb9WMMItMc2zKuMXHAnNws");
-
+    myHeaders.append("apikey", "23eee797ab8b1ddf0333b71525288c5675703471 ");
+    console.log(moneyValue, sourceCurrency, targetCurrency )
 
     let requestOptions = {
         method: 'GET',
         redirect: 'follow',
         headers: myHeaders
     };
+    let vt = "&from=" + sourceCurrency + "&to=" + targetCurrency + "&amount=" + moneyValue + "&format=json"
     const output = outputWrapper.querySelector("#result");
-
- //   fetch("https://api.apilayer.com/currency_data/convert?to=gbp&from=usd&amount=100", requestOptions)
- //       .then(response => response.text())
- //       .then(result => console.log(result))
- //       .catch(error => console.log('error', error));
-
-    //fetch("https://api.apilayer.com/currency_data/convert?to={${targetCurrency}}&from={${sourceCurrency}}&amount={${moneyValue}}", requestOptions)
-    fetch("https://api.apilayer.com/currency_data/convert?to=usd&from=rub&amount=1", requestOptions)
+   fetch("https://api.getgeoapi.com/v2/currency/convert?api_key=23eee797ab8b1ddf0333b71525288c5675703471" + vt)
         .then(response => response.json())
-        .then(result => { console.log(result)
-            let currencyArray = result.result; //получаем объект с результатами
+        .then(response => { console.log(response)
+            let currencyArray = response.rates; //получаем объект с результатами
+            let d = `${targetCurrency}`
+            let rates = currencyArray[d.toUpperCase()]
             output.innerHTML='';
-            output.innerHTML = currencyArray;
+            output.innerHTML = rates["rate_for_amount"];
         })
         .catch(error => console.log('error', error));
 }

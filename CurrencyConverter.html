@@ -7,21 +7,24 @@
 </head>
 <body>
     <div class="wrapper">
-        <h1>Конвертор валют</h1>
+        <div class="title_div">
+            <h1>Конвертор валют</h1>
+        </div>
+
         <form class="currencyForm">
             <div class="inputWrapper">
                 <label for="commandInput">Ввести команду (например, 15 usd in rub):</label>
                 <input id="commandInput" type="text" class="input" required="required" pattern="[0-9]{1,10}\s[A-z]{3}\sin\s[A-z]{3}" />
             </div>
             <div class="outputWrapper">
-                <label for="result">Сумма в базовой валюте:</label>
+                <label for="result">Сумма в целевой валюте:</label>
                 <output id="result" type="number" />
             </div>
-            <button type="submit">Конвертировать</button>
-            <div class="currencyNames">
-                <h2>Названия валют</h2>
-                <div class="currencyNamesOutput"></div>
+            <div class="buttons">
+                <button type="submit">Конвертировать</button>
+                <button>Показать курсы валют</button>
             </div>
+
             <hr />
         </form>
     </div>

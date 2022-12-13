@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Курсы валют</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrapper">
+  <div class="title_div">
+    <h1>Курсы валют</h1>
+  </div>
+
+  <form class="currencyForm">
+    <div class="outputWrapper">
+      <div class="cur_div">
+        <label for="EUR">Курс EUR к базовой валюте:</label>
+        <output id="EUR" type="number" />
+      </div>
+      <div class="cur_div">
+        <label for="USD">Курс USD к базовой валюте:</label>
+        <output id="USD" type="number" />
+      </div>
+      <div class="cur_div">
+        <label for="GBP">Курс GBP к базовой валюте:</label>
+        <output id="GBP" type="number" />
+      </div>
+
+    </div>
+    <div class="buttons">
+      <div class="inputWrapper">
+        <label for="base_currency">Выберите базовую валюту:</label>
+        <input type="text" id="base_currency" list="currencies">
+        <datalist id="currencies">
+          <option value="RUB">
+          <option value="USD">
+          <option value="EUR">
+          <option value="GBP">
+        </datalist>
+      </div>
+      <button type="submit">Конвертировать</button>
+
+    </div>
+
+    <hr />
+  </form>
+</div>
+<!--script src="main.js"></script-->
+</body>
+
+</html>
