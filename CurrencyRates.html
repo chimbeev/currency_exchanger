@@ -11,32 +11,30 @@
     <h1>Курсы валют</h1>
   </div>
 
-  <form class="currencyForm">
+  <form class="currencyRatesForm">
     <div class="outputWrapper">
       <div class="cur_div">
-        <label for="EUR">Курс EUR к базовой валюте:</label>
+        <label for="EUR"><h3>Курс EUR к базовой валюте:</h3></label>
         <output id="EUR" type="number" />
       </div>
       <div class="cur_div">
-        <label for="USD">Курс USD к базовой валюте:</label>
+        <label for="USD"><h3>Курс USD к базовой валюте:</h3></label>
         <output id="USD" type="number" />
       </div>
       <div class="cur_div">
-        <label for="GBP">Курс GBP к базовой валюте:</label>
+        <label for="GBP"><h3>Курс GBP к базовой валюте:</h3></label>
         <output id="GBP" type="number" />
       </div>
-
     </div>
     <div class="buttons">
       <div class="inputWrapper">
-        <label for="base_currency">Выберите базовую валюту:</label>
-        <input type="text" id="base_currency" list="currencies">
-        <datalist id="currencies">
-          <option value="RUB">
-          <option value="USD">
-          <option value="EUR">
-          <option value="GBP">
-        </datalist>
+        <label for="base_currency"><h3>Выберите базовую валюту:</h3></label>
+        <select id="base_currency" onchange="showCurrencyRates()">
+          <option>RUB</option>
+          <option>USD</option>
+          <option>EUR</option>
+          <option>GBP</option>
+        </select>
       </div>
       <button type="submit">Конвертировать</button>
 

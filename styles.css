@@ -75,10 +75,11 @@ body {
     display: flex;
     flex-direction: column;
     width: 400px;
+    align-items: center;
 }
 
 .cur_div {
     display: flex;
     flex-direction: row;
-    height: 30px;
+    height: 80px;
 }
