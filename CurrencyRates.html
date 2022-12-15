@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Курсы валют</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
 <body>
 <div class="wrapper">
@@ -15,35 +16,41 @@
     <div class="outputWrapper">
       <div class="cur_div">
         <label for="EUR"><h3>Курс EUR к базовой валюте:</h3></label>
-        <output id="EUR" type="number" />
+        <output id="EUR" class ="rate" type="number" />
       </div>
       <div class="cur_div">
         <label for="USD"><h3>Курс USD к базовой валюте:</h3></label>
-        <output id="USD" type="number" />
+        <output id="USD" class ="rate" type="number" />
       </div>
       <div class="cur_div">
         <label for="GBP"><h3>Курс GBP к базовой валюте:</h3></label>
-        <output id="GBP" type="number" />
+        <output id="GBP" class ="rate" type="number" />
+      </div>
+      <div class="cur_div">
+        <label for="RUB"><h3>Курс RUB к базовой валюте:</h3></label>
+        <output id="RUB" class ="rate" type="number" />
       </div>
     </div>
     <div class="buttons">
       <div class="inputWrapper">
         <label for="base_currency"><h3>Выберите базовую валюту:</h3></label>
-        <select id="base_currency" onchange="showCurrencyRates()">
-          <option>RUB</option>
-          <option>USD</option>
-          <option>EUR</option>
-          <option>GBP</option>
+        <select id="base_currency">
+          <option selected value="Выберите валюту">Выберите валюту</option>
+          <option value="rub">RUB</option>
+          <option value="usd">USD</option>
+          <option value="eur">EUR</option>
+          <option value="gbp">GBP</option>
         </select>
       </div>
       <button type="submit">Конвертировать</button>
 
     </div>
-
+    <p>Базовая валюта (Base currency) — первая валюта в обозначении валютной пары, которая покупается или продается за валюту котировки.
+      Например, в валютной паре EURUSD базовой валютой является EUR. Объем сделки выражается в базовой валюте.</p>
     <hr />
   </form>
 </div>
-<!--script src="main.js"></script-->
+<script src="rates.js"></script>
 </body>
 
 </html>

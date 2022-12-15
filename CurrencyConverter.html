@@ -4,30 +4,39 @@
     <meta charset="UTF-8">
     <title>Конвертор валют</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="node_modules/bulma/css/bulma.css">
 </head>
 <body>
+    <article class="panel is-primary">
+        <p class="panel-heading">
+            Конвертор валют
+        </p>
+        <p class="panel-tabs">
+            <a class="is-active">Конвертор валют</a>
+            <a>Курсы валют</a>
+        </p>
     <div class="wrapper">
-        <div class="title_div">
-            <h1>Конвертор валют</h1>
-        </div>
-
         <form class="currencyForm">
             <div class="inputWrapper">
-                <label for="commandInput">Ввести команду (например, 15 usd in rub):</label>
-                <input id="commandInput" type="text" class="input" required="required" pattern="[0-9]{1,10}\s[A-z]{3}\sin\s[A-z]{3}" />
+                <div class="panel-block">
+                    <label for="commandInput">Введите команду<br>(например, 15 usd in rub):</label>
+                    <input id="commandInput" type="text" class="input is-primary" required="required" placeholder="например, 15 usd in rub" pattern="[0-9]{1,10}\s[A-z]{3}\sin\s[A-z]{3}" />
+                </div>
             </div>
             <div class="outputWrapper">
                 <label for="result">Сумма в целевой валюте:</label>
-                <output id="result" type="number" />
+                <output id="result" type="number" class="tag is-info is-large tags" />
             </div>
-            <div class="buttons">
-                <button type="submit">Конвертировать</button>
-                <button>Показать курсы валют</button>
+            <div class="buttons_div">
+                <div class="panel-block">
+                    <button type="submit" class="button is-warning">Конвертировать</button>
+                <div>
             </div>
 
             <hr />
         </form>
     </div>
+    </article>
     <script src="main.js"></script>
 </body>
 

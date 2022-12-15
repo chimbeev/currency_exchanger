@@ -7,19 +7,29 @@ body {
 
 .currencyForm {
     margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.currencyRatesFormForm {
+    margin-bottom: 25px;
+    justify-content: center;
 }
 
 .inputWrapper {
     margin: 10px 0;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .title_div,
-.buttons {
+.buttons_div {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .inputWrapper input,
@@ -35,6 +45,15 @@ body {
 }
 
 .currencyForm button {
+    border: unset;
+    background: darkblue;
+    color: #fff;
+    padding: 7px 15px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.currencyRatesForm button {
     border: unset;
     background: darkblue;
     color: #fff;
@@ -73,13 +92,24 @@ body {
 
 .outputWrapper {
     display: flex;
-    flex-direction: column;
-    width: 400px;
-    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    align-items: baseline;
+    justify-content: center;
 }
 
 .cur_div {
     display: flex;
     flex-direction: row;
     height: 80px;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.rate {
+    font-size: 20px;
+}
+
+.tags {
+    min-width: 10%;
 }
