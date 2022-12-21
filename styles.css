@@ -92,24 +92,49 @@ body {
 
 .outputWrapper {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
-    align-items: baseline;
+    align-items: center;
     justify-content: center;
+}
+
+.conv {
+    flex-direction: row;
 }
 
 .cur_div {
     display: flex;
     flex-direction: row;
     height: 80px;
+    min-width: 40%;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
 }
 
 .rate {
     font-size: 20px;
+    min-width: 10%;
 }
 
 .tags {
-    min-width: 10%;
+    min-width: 30%;
+    margin-left: 20px;
 }
+
+#result {
+    min-width: 12%;
+    margin-left: 20px;
+
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.prim_text {
+    max-width: 80%;
+    margin-top: 25px;
+}
+

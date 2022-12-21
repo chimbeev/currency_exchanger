@@ -1,5 +1,26 @@
 {
   "dependencies": {
-    "bulma": "^0.9.4"
-  }
+    "bulma": "^0.9.4",
+    "cypress": "^12.1.0"
+  },
+  "name": "currency_exchanger",
+  "description": "Тестовое задание: frontend\r Напишите SPA для конвертирования валют. Для получения текущих курсов найдите и используйте любое отрытое API.",
+  "version": "1.0.0",
+  "main": "main.js",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+пше  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chimbeev/currency_exchanger.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chimbeev/currency_exchanger/issues"
+  },
+  "homepage": "https://github.com/chimbeev/currency_exchanger#readme"
 }

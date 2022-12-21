@@ -20,29 +20,10 @@ function submitForm(e) {
         .then(response => { console.log(response)
             let currencyArray = response.rates; //получаем объект с результатами
             let d = `${targetCurrency}`
-            let rates = currencyArray[d.toUpperCase()]
+            let rates = currencyArray[d.toUpperCase()] //выбираем из массива курс валюты
             output.innerHTML='';
-            output.innerHTML = rates["rate_for_amount"];
-        })
-        .catch(error => console.log('error', error));
-}
-
-function showCurrencyRates() { // Выводит курсы валют относительно базовой валюты
-    const outputDiv = currencyNames.querySelector(".outputWrapper");
-    let moneyValue = 1;//кол-во базовой валюты
-    let sourceCurrency = inputWrapper.getElementById("base_currency").value; //базовая валюта
-    let targetCurrency = 'EUR';//целевая валюта
-    console.log(moneyValue, sourceCurrency, targetCurrency )
-    let vt = "&from=" + sourceCurrency + "&to=" + targetCurrency + "&amount=" + moneyValue + "&format=json"
-    const output = outputWrapper.querySelector("#EUR");
-    fetch("https://api.getgeoapi.com/v2/currency/convert?api_key=23eee797ab8b1ddf0333b71525288c5675703471" + vt)
-        .then(response => response.json())
-        .then(response => { console.log(response)
-            let currencyArray = response.rates; //получаем объект с результатами
-            let d = `${targetCurrency}`
-            let rates = currencyArray[d.toUpperCase()]
-            output.innerHTML='';
-            output.innerHTML = rates["rate_for_amount"];
+            output.innerHTML = Number(rates["rate_for_amount"]).toFixed(2).toString() //Сначала преобразуем в строку в число,
+            // затем округляем до двух цифр после запятой, потом обратно преобразуем в строку
         })
         .catch(error => console.log('error', error));
 }

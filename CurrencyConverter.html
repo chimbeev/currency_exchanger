@@ -11,31 +11,32 @@
         <p class="panel-heading">
             Конвертор валют
         </p>
-        <p class="panel-tabs">
-            <a class="is-active">Конвертор валют</a>
-            <a>Курсы валют</a>
-        </p>
-    <div class="wrapper">
-        <form class="currencyForm">
-            <div class="inputWrapper">
-                <div class="panel-block">
-                    <label for="commandInput">Введите команду<br>(например, 15 usd in rub):</label>
-                    <input id="commandInput" type="text" class="input is-primary" required="required" placeholder="например, 15 usd in rub" pattern="[0-9]{1,10}\s[A-z]{3}\sin\s[A-z]{3}" />
+        <div class="tabs is-medium is-centered is-boxed">
+            <ul>
+                <li class="is-active"><a href="CurrencyConverter.html">Конвертор валют</a></li>
+                <li ><a href="CurrencyRates.html">Курсы валют</a></li>
+            </ul>
+        </div>
+        <div class="wrapper">
+            <form class="currencyForm">
+                <div class="inputWrapper">
+                    <div class="panel-block">
+                        <label for="commandInput">Введите команду<br>(например, 15 usd in rub):</label>
+                        <input id="commandInput" type="text" class="input is-primary" required="required" placeholder="например, 15 usd in rub" pattern="[0-9]{1,10}\s[A-z]{3}\sin\s[A-z]{3}" />
+                    </div>
                 </div>
-            </div>
-            <div class="outputWrapper">
-                <label for="result">Сумма в целевой валюте:</label>
-                <output id="result" type="number" class="tag is-info is-large tags" />
-            </div>
-            <div class="buttons_div">
-                <div class="panel-block">
-                    <button type="submit" class="button is-warning">Конвертировать</button>
-                <div>
-            </div>
-
-            <hr />
-        </form>
-    </div>
+                <div class="outputWrapper conv">
+                    <label for="result">Сумма в целевой валюте:</label>
+                    <output id="result" type="number" class="tag is-info is-large"/>
+                </div>
+                <div class="buttons_div">
+                    <div class="panel-block">
+                        <button type="submit" class="button is-warning">Конвертировать</button>
+                    </div>
+                </div>
+                <hr />
+            </form>
+        </div>
     </article>
     <script src="main.js"></script>
 </body>
