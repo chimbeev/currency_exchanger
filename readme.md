@@ -22,3 +22,4 @@
 Для запуска приложения в браузере набрать "http://localhost:8080/CurrencyConverter.html"
 Для проведения тестирования открыть второй терминал и запустить: cypress open, далее E2E testing, 
 далее Start E2E testing in Chrome, далее spec.cy.js для проведения тестов. 
+Currency Exchanger, Currrency rates.
